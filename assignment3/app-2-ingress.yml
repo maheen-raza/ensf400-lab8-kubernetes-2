@@ -14,8 +14,7 @@ spec:
         number: 8080
   ingressClassName: nginx
   rules:
-  - host: app2.com
-    http:
+  - http:
       paths:
       - path: /app
         pathType: Prefix
