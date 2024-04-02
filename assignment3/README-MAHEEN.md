@@ -23,3 +23,6 @@ kubectl get ingresses
 curl http://<link>/nginx
 curl http://<link>/app
 
+### Forwarding:
+kubectl port-forward svc/nginx-svc 8080:8080 -n default
+
