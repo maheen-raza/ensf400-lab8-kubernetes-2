@@ -1,6 +1,10 @@
 ## Commands:
 
 cd assignment3
+minikube start
+minikube addons enable ingress
+kubectl delete -f .
+kubectl rollout restart deployment -n ingress-nginx ingress-nginx-controller
 
 ### To apply each file:
 kubectl apply -f nginx-dep.yml
@@ -20,9 +24,5 @@ kubectl get services
 kubectl get ingresses
 
 ### To get responses from the load-balanced apps
-curl http://<link>/nginx
-curl http://<link>/app
-
-### Forwarding:
-kubectl port-forward svc/nginx-svc 8080:8080 -n default
+curl http://(minikube ip)/
 
