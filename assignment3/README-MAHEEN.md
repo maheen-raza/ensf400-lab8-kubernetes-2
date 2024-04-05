@@ -3,8 +3,6 @@
 cd assignment3
 minikube start
 minikube addons enable ingress
-kubectl delete -f .
-kubectl rollout restart deployment -n ingress-nginx ingress-nginx-controller
 
 ### To apply each file:
 kubectl apply -f nginx-dep.yml
