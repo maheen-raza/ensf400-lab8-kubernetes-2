@@ -14,7 +14,7 @@ kubectl apply -f app-1-svc.yml
 kubectl apply -f app-1-ingress.yml
 kubectl apply -f app-2-dep.yml
 kubectl apply -f app-2-svc.yml
-kubectl create -f app-2-ingress.yml
+kubectl apply -f app-2-ingress.yml
 
 ### To get deployments, services and ingresses
 kubectl get deployments
