@@ -1,5 +1,8 @@
-## Commands:
+## Steps I took to complete the assingment:
 
+
+
+## Commands:
 cd assignment3
 minikube start
 minikube addons enable ingress
