@@ -1,3 +1,5 @@
+## Author: Maheen Raza
+
 ## Steps I took to complete the assignment:
 
 In order to complete assignment 3 for this course, these are the steps I took:
@@ -6,7 +8,7 @@ I first created the "nginx-dep.yml" deployment configuration file, where I defin
 
 I then created the configMap in the "nginx-configmap.yml" file. Within this file, I made sure to define the configuration file that specifies two backend servers as a value to the key "default.conf". This means that the actual name of the configuration file is "default.conf".
 
-I then created the "nginx-ingress.yml" file, where I made sure to redirect the requests to "/" to the backend "nginx-svc" service.
+I then created the "nginx-ingress.yml" file, where I made sure to redirect the requests to "/" to the backend "nginx-svc" service. Lastly, I create the nginx service "nginx-svc.yml" file, which of type ClusterIP, and selects pod "nginx".
 
 I then created all the files for app 1 and app 2, starting with the deployment files. I used the example file that Dr. Drew provided for "app-1-dep.yml", where there's a singular replica of a pod and it creates a container by pulling an image from ghcr.io/denoslab/ensf400-sample-app:v1 and ghcr.io/denoslab/ensf400-sample-app:v2 for app 1 and app 2 respectively. Both of these applications expose port 3000, which was a change made by Dr. Drew himself. I then created the ingress files in order to define the routing rules for HTTP traffic. Any requests from the path "/" are forwarded to app-1-svc and app-2-svc via port 8080. I made sure that app-1 was the main deployment and app-2 was the canary deployment, and defined the weights as 70% and 30% respectively. This means 70% of traffic is routed to app-1 and 30% of traffic is routed to app-2. Lastly, I created the service files app-1-svc and app-2-svc for each of the applications. They select the appropriate pod (either app-1 or app-2), and exposes them on port 8080. Once traffic arrives on port 8080, it gets redirected to port 3000 on either of the pods, either for app-1 or app-2.
 
