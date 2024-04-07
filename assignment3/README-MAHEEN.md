@@ -1,4 +1,4 @@
-## Steps I took to complete the assingment:
+## Steps I took to complete the assignment:
 
 
 
