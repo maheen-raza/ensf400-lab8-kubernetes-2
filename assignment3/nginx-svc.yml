@@ -1,10 +1,11 @@
+# creating the nginx service
 apiVersion: v1
 kind: Service
 metadata:
   name: nginx-svc
 spec:
   selector:
-    app: nginx
+    app: nginx # selecting the "nginx" pod
   ports:
     - protocol: TCP
-      port: 80
+      port: 80 # exposes port 80

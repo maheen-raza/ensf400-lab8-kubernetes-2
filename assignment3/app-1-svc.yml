@@ -1,11 +1,12 @@
+# creating the app-1 service
 apiVersion: v1
 kind: Service
 metadata:
   name: app-1-svc
 spec:
   selector:
-    app: app-1
+    app: app-1 # selects the pod "app-1"
   ports:
     - protocol: TCP
-      port: 8080
+      port: 8080 # reroutes traffice from 8080 to 3000
       targetPort: 3000

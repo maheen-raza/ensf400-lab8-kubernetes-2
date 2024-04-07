@@ -1,8 +1,9 @@
+# creating the nginx configMap
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-configmap
-data:
+data: # defining the nginx configuration file
   default.conf: |
     upstream backend {
         server app-1:8080;
