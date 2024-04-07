@@ -2,7 +2,7 @@
 
 ## Steps I took to complete the assignment:
 
-In order to complete assignment 3 for this course, these are the steps I took:
+In order to complete assignment 3 for this course, the following are the steps I took, and I also used the additional information given to us in lab 7 and 8, which made this assignment a tad bit easier.
 
 I first created the "nginx-dep.yml" deployment configuration file, where I defined the type and metadata, and made sure that it created 5 replicas of pods, and created a container by pulling from the base image nginx with the version tag 1.14.2, and exposed containerPort 80. I then also made sure to mount the configMap named nginx-configmap in the "nginx-configmap.yml" file as a volume at the path "/etc/nginx/default.conf". As per the instructions, when I tried mounting it at the path "/etc/nginx/conf.d", all 5 nginx deployments would not run. I used the "/etc/nginx/default.conf", as it was something I had similarily done in assignment 2, where it's the path to the configuration file, and luckily it worked.
 
