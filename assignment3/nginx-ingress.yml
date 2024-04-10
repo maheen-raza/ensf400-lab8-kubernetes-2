@@ -7,7 +7,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: / # rerouting traffice from "/" to nginx-svc service
+      - path: / # rerouting traffic from "/" to nginx-svc service
         pathType: Prefix
         backend:
           service:

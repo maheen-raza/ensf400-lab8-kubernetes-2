@@ -8,5 +8,5 @@ spec:
     app: app-1 # selects the pod "app-1"
   ports:
     - protocol: TCP
-      port: 8080 # reroutes traffice from 8080 to 3000
+      port: 8080 # reroutes traffic from 8080 to 3000
       targetPort: 3000
